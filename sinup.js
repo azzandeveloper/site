@@ -19,7 +19,8 @@ document.getElementById("register-form").addEventListener("submit", async functi
 
 const { error2 } = await supabaseClient
   .from('register')
-  .insert({ id: Math.round(Math.random() * 100), name: name, image: image, email: email , password: password, })
+  .insert({ id: Math.round(Math.random() * 101), username: username, image: image, email: email , password: password, })
+  
     if (error) {
         alert(error.message)
     } 
