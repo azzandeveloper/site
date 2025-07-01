@@ -19,7 +19,7 @@ document.getElementById("register-form").addEventListener("submit", async functi
 
 const { error2 } = await supabaseClient
   .from('register')
-  .insert({ id: Math.round(Math.random() * 101), name: name, image: image, email: email , password: password, })
+  .insert({ id: Math.round(Math.random() * 100), name: name, image: image, email: email , password: password, })
     if (error) {
         alert(error.message)
     } 
@@ -28,8 +28,7 @@ const { error2 } = await supabaseClient
         alert("Signup Successfully")
         localStorage.setItem("name",username)
         localStorage.setItem("image",image)
-        window.location.href = "../login/login.html"
+        window.location.href = "./login.html"
         console.log(data);
     }
 }) 
-'https://nztjukjpbyuofthcfhzp.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56dGp1a2pwYnl1b2Z0aGNmaHpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA3NDI0NzEsImV4cCI6MjA2NjMxODQ3MX0.Y-IDUc8xa6KXLZJZjM6amuGBKvJLJZwW7Sihqp7tPf4'
